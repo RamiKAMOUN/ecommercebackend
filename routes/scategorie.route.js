@@ -2,7 +2,7 @@ const express=require('express');
 const router=express.Router();
 const scategories=require("../models/scategorie")
 
-router.post('./', async(req,res)=>{
+router.post('/', async(req,res)=>{
 try {
   data=req.body;
   scat=new scategories(data);
@@ -15,7 +15,7 @@ try {
 }
 
 })
-router.get('./',async(req,res)=>{
+router.get('/',async(req,res)=>{
   try {
     gall=await scategories.find();
   res.status(200).send(gall);
@@ -25,7 +25,7 @@ router.get('./',async(req,res)=>{
   }
 }
 )
-router.get('./:scategId',async(req,res)=>{
+router.get('/:scategId',async(req,res)=>{
   try {
     Myid=req.params.scategId;
     gtid= await scategories.findOneById(Myid)
@@ -36,7 +36,7 @@ router.get('./:scategId',async(req,res)=>{
   }
 })
 
-router.put('./:scategId',async(req,res)=>{
+router.put('/:scategId',async(req,res)=>{
  try {
   Myid=req.params.scategId;
   newData=req.body;
@@ -47,7 +47,7 @@ router.put('./:scategId',async(req,res)=>{
  }
   
 })
-router.delete('./:scategId',async(req,res)=>{
+router.delete('/:scategId',async(req,res)=>{
   try {
     myid=req.params.scategId;
     del= await findOneAndDelete(myid);

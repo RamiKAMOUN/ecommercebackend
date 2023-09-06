@@ -5,15 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon app"
-    
+    "start": "nodemon app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "mongoose": "^7.3.0"
+    "mongoose": "^7.3.0",
+    "stripe": "^13.4.0"
   }
 }
