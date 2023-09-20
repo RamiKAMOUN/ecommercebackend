@@ -15,6 +15,7 @@ const categorieRouter =require("./routes/categorie.route")
 const scategorieSchema=require("./routes/scategorie.route")
 const articleRouter =require("./routes/article.route")
 const paymentRouter = require( "./routes/payment.route.js")
+const userRouter=require("./routes/user.route")
 
 dotenv.config()
 
@@ -43,4 +44,5 @@ app.use('/api/categories', categorieRouter);
 app.use('/api/scategorie',scategorieSchema);
 app.use('/api/articles', articleRouter);
 app.use('/api/payment', paymentRouter);
+app.use('/api/users', userRouter);
 module.exports = app;
